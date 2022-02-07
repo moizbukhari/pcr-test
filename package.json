@@ -6,7 +6,8 @@
     "start": "nodemon ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "build": "webpack --config webpack.conf.js"
+    "build": "ng build",
+    "heroku-postbuild": "ng build --prod"
   },
   "dependencies": {
     "config": "^3.3.3",
