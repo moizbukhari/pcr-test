@@ -1,0 +1,8 @@
+extends layout
+
+
+block content
+    each product in products
+        h1=product.name
+        h2=product.price
+        img( src=product.img.path ,  alt=product.img.contentType )
