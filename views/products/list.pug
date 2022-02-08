@@ -1,23 +1,34 @@
 extends ../layout
 
 block content
+     <div class="allcontain">
+        <div class="feturedsection">
+          <h1 class="text-center"><span class="bdots">&bullet;</span>OUR<span class="carstxt">PATIENTS</span>&bullet;</h1>
+        </div>
+   
+
+
     .row
         .col-sm-8
             h1=title
-        .col-sm-4
-            a(href="/products/add", class="btn btn-success float-right") Add New CAR
+        
     table.table
         thead
             tr
-                th Name
-                th Price per Hour
-                th Actions
+                th reference number
+                th Patient name
+                th Date 
+                th Partner name
+                th Status 
+                th view certificate
         tbody
             each product in products
 
                 tr
                     td=product.name
                     td=product.price
+                    td=product.date
+                    td=product.category
                    
                     td  
                         
@@ -25,4 +36,3 @@ block content
                         br
                         a(href="/products/edit/"+product._id, class="btn btn-warning") Edit
                         br
-                        a(href="/products/cart/"+product._id, class="btn btn-info") Add To Cart
