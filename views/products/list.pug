@@ -22,7 +22,7 @@ block content
                         th Status 
                         th view certificate
                     tbody
-                        each product in products
+                        each product in products ? product.category = "partner 1"
 
                             tr
                                 td=product.name
