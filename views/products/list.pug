@@ -24,15 +24,15 @@ block content
                     tbody
                         each product in products
 
-                        tr
-                            td=product.name
-                            td=product.price
-                            td=product.date
-                            td=product.category
+                            tr
+                                td=product.name
+                                td=product.price
+                                td=product.date
+                                td=product.category
                    
-                            td  
+                                td  
                         
-                                a(href="/products/delete/"+product._id, class="btn btn-danger") Delete
-                                br
-                                a(href="/products/edit/"+product._id, class="btn btn-warning") Edit
+                                    a(href="/products/delete/"+product._id, class="btn btn-danger") Delete
+                                    br
+                                    a(href="/products/edit/"+product._id, class="btn btn-warning") Edit
                                 
