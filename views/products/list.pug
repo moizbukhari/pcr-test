@@ -8,33 +8,33 @@ block content
    
 
 
-    .row
+        .row
             .col-sm-8
                 h1="Patient's list"
         
-                table.table
-                    thead
-                        tr
-                        th reference number
-                        th Patient name
-                        th Date 
-                        th Partner name
-                        th Status 
-                        th view certificate
-                    tbody
-                        each product in products 
+        table.table
+            thead
+                tr
+                th reference number
+                th Patient name
+                th Date 
+                th Partner name
+                th Status 
+                th view certificate
+            tbody
+                each product in products 
 
-                            tr
-                                td=product.name
-                                td=product.price
-                                td=product.updated
-                                td=product.category
-                                td=product.status
-                   
-                                td  
+                    tr
+                        td=product.name
+                        td=product.price
+                        td=product.updated
+                        td=product.category
+                        td=product.status
+            
+                        td  
+                
+                            a(href="/products/delete/"+product._id, class="btn btn-danger") Delete
                         
-                                    a(href="/products/delete/"+product._id, class="btn btn-danger") Delete
-                                
-                                    a(href="/products/edit/"+product._id, class="btn btn-warning") Edit
-                                    br
-                                
+                            a(href="/products/edit/"+product._id, class="btn btn-warning") Edit
+                            br
+                        
