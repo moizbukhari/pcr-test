@@ -1,42 +1,42 @@
 extends ../layout
 
 block content
-    h1 Post New Product
+    h1 ADD PATIENT DETAILS
     form(action="/products/add",method="post")
         .form-group
-            label(for="name") Product Name
+            label(for="name") Unique Reference Number
             input#name(type="text", class="form-control", name="name")
         .form-group
-            label(for="description") Product Description
+            label(for="description") FIRST NAME
             input#name(type="text", class="form-control", name="description")
         .form-group
-            label(for="price") Product Price
+            label(for="price") LAST NAME
             input#price(type="text", class="form-control", name="price")
 
             .form-group
-                label(for="category") Choose Category
+                label(for="category") Partner Name
                 <select class="form-control"  name="category" type="text" style={{ margin: "auto", width: "50%", height: "50px", fontSize: "18px" }}>
-                <option value="Mobile Phone" style={select}>Mobile Phone</option>
-                <option value="Cars" style={select}>Cars</option>
-                <option value="Motorcycle" style={select}>Motorcycle</option>
-                <option value="Houses" style={select}>Houses</option>
-                <option value="TV-Video-Audio" style={select}>TV-Video-Audio</option>
-                <option value="Tablets" style={select}>Tablets</option>
-                <option value="Lands&Plots" style={select}>Lands&Plots</option>
+                <option value="Mobile Phone" style={select}>partner 1</option>
+                <option value="Cars" style={select}>partner 2</option>
+                <option value="Motorcycle" style={select}>partner3</option>
+                <option value="Houses" style={select}>partner 4</option>
+                <option value="TV-Video-Audio" style={select}>partner 5</option>
+                <option value="Tablets" style={select}>partner 6</option>
+                <option value="Lands&Plots" style={select}>partner 7</option>
                 </select>
 
-            .form-group
-                label(for="condition") Choose Condition
-                <select class="form-control"  name="condition" type="text" style={{ margin: "auto", width: "50%", height: "50px", fontSize: "18px" }}>
-                <option value="Used" style={select}>Used</option>
-                <option value="New" style={select}>New</option>
+            //- .form-group
+            //-     label(for="condition") Choose Condition
+            //-     <select class="form-control"  name="condition" type="text" style={{ margin: "auto", width: "50%", height: "50px", fontSize: "18px" }}>
+            //-     <option value="Used" style={select}>Used</option>
+            //-     <option value="New" style={select}>New</option>
                
-                </select>
+            //-     </select>
             
         
          
         
-        input#fileUpload(type="file", required, name="file")
+        //- input#fileUpload(type="file", required, name="file")
         
                    
         input(type="submit", class="btn btn-info")
