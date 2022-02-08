@@ -9,30 +9,30 @@ block content
 
 
         .row
-        .col-sm-8
-            h1=title
+            .col-sm-8
+                h1=title
         
-        table.table
-        thead
-            tr
-                th reference number
-                th Patient name
-                th Date 
-                th Partner name
-                th Status 
-                th view certificate
-        tbody
-            each product in products
+                table.table
+                    thead
+                        tr
+                        th reference number
+                        th Patient name
+                        th Date 
+                        th Partner name
+                        th Status 
+                        th view certificate
+                    tbody
+                        each product in products
 
-                tr
-                    td=product.name
-                    td=product.price
-                    td=product.date
-                    td=product.category
+                            tr
+                            td=product.name
+                            td=product.price
+                            td=product.date
+                            td=product.category
                    
-                    td  
+                            td  
                         
-                        a(href="/products/delete/"+product._id, class="btn btn-danger") Delete
-                        br
-                        a(href="/products/edit/"+product._id, class="btn btn-warning") Edit
-                        br
+                                a(href="/products/delete/"+product._id, class="btn btn-danger") Delete
+                                br
+                                a(href="/products/edit/"+product._id, class="btn btn-warning") Edit
+                                br
