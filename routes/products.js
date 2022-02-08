@@ -36,6 +36,7 @@ router.post("/add",async function (req, res, next) {
   product.category= req.body.category;
   product.condition= req.body.condition;
   product.status=req.body.status;
+  product.Date=req.body.Date;
   
   product.img.path ="stylesheets/"+ req.body.file;
   product.img.contentType = "image/png";

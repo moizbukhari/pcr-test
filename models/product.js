@@ -7,6 +7,7 @@ var productSchema = mongoose.Schema({
   category: String,
   status:String,
   condition: String,
+  updated: { type: Date, default: Date.now },
   
   img: { 
     path: String, 
