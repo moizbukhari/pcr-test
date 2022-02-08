@@ -35,6 +35,7 @@ router.post("/add",async function (req, res, next) {
   product.description = req.body.description;
   product.category= req.body.category;
   product.condition= req.body.condition;
+  product.status=req.body.status;
   
   product.img.path ="stylesheets/"+ req.body.file;
   product.img.contentType = "image/png";
@@ -73,6 +74,10 @@ router.post("/edit/:id", async function (req, res, next) {
   let product = await Product.findById(req.params.id);
   product.name = req.body.name;
   product.price = req.body.price;
+  product.category= req.body.category;
+  product.condition= req.body.condition;
+  product.status=req.body.status;
+
   product.img.path ="stylesheets/"+ req.body.file;
   product.img.contentType = "image/png";
   await product.save();
