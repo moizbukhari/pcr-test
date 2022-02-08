@@ -3,7 +3,7 @@ extends ../layout
 block content
     h1 Edit Product
     form(action="/products/edit/"+product._id,method="post")
-       .form-group
+        .form-group
             label(for="name") Unique Reference Number
             input#name(type="text", class="form-control", name="name" , value=product.name)
         .form-group
@@ -25,6 +25,6 @@ block content
                 <option value="Lands&Plots" style={select}>partner 7</option>
                 </select>
 
-        input#fileUpload(type="file", required, name="file")
+            input#fileUpload(type="file", required, name="file")
         input(type="submit", class="btn btn-info")
     
