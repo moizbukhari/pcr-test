@@ -3,13 +3,28 @@ extends ../layout
 block content
     h1 Edit Product
     form(action="/products/edit/"+product._id,method="post")
+       .form-group
+            label(for="name") Unique Reference Number
+            input#name(type="text", class="form-control", name="name" , value=product.name)
         .form-group
-            label(for="name") Car Name
-            input#name(type="text", class="form-control", name="name", value=product.name)
+            label(for="description") FIRST NAME
+            input#name(type="text", class="form-control", name="description",value=product.description)
         .form-group
-            label(for="price") Car Price per Hour
+            label(for="price") LAST NAME
             input#price(type="text", class="form-control", name="price", value=product.price)
-        
+
+            .form-group
+                label(for="category") Partner Name
+                <select class="form-control"  name="category" type="text" style={{ margin: "auto", width: "50%", height: "50px", fontSize: "18px" }}>
+                <option value="Mobile Phone" style={select}>partner 1</option>
+                <option value="Cars" style={select}>partner 2</option>
+                <option value="Motorcycle" style={select}>partner3</option>
+                <option value="Houses" style={select}>partner 4</option>
+                <option value="TV-Video-Audio" style={select}>partner 5</option>
+                <option value="Tablets" style={select}>partner 6</option>
+                <option value="Lands&Plots" style={select}>partner 7</option>
+                </select>
+
         input#fileUpload(type="file", required, name="file")
         input(type="submit", class="btn btn-info")
     
