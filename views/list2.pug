@@ -27,7 +27,7 @@ block content
                 tr
                     td=product.name
                     td=product.price
-                    td=product.date
+                    td=product.updated
                     td=product.category
                     td=product.status
                    
@@ -35,7 +35,7 @@ block content
                         
                         //- a(href="/products/delete/"+product._id, class="btn btn-danger") Delete
                         //- br
-                        a(href="/products/edit/"+product._id, class="btn btn-warning") Edit
+                        a(href="/products/edit/"+product._id, class="btn btn-warning") View certificate
                         br
                         //- a(href="/products/cart/"+product._id, class="btn btn-info") Add To Cart
 
