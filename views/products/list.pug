@@ -22,6 +22,7 @@ block content
                 th Status 
                 th view certificate
             tbody
+            if user.number
                 each product in products 
 
                     tr
@@ -30,7 +31,6 @@ block content
                         td=product.updated
                         td=product.category
                         td=product.status
-                        if user.number
             
                         td  
                 
