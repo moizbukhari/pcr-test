@@ -28,6 +28,7 @@ router.post("/register", async function (req, res, next) {
     name: req.body.name,
     password: req.body.password,
     number: req.body.number
+    admin:req.body.admin
    
   });
   if (user) return res.redirect("/register");
