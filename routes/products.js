@@ -37,7 +37,14 @@ router.post("/add",async function (req, res, next) {
   product.condition= req.body.condition;
   product.status=req.body.status;
   product.Date=req.body.Date;
-  
+  product.gender=req.body.gender;
+  product.telephone=req.body.telephone;
+  product.email=req.body.email;
+  product.ethnicity=req.body.ethnicity;
+  product.country=req.body.country;
+  product.address=req.body.address;
+  product.postalcode=req.body.postalcode;
+  product.participation=req.body.participation;
   product.img.path ="stylesheets/"+ req.body.file;
   product.img.contentType = "image/png";
 
@@ -78,6 +85,15 @@ router.post("/edit/:id", async function (req, res, next) {
   product.category= req.body.category;
   product.condition= req.body.condition;
   product.status=req.body.status;
+  product.Date=req.body.Date;
+  product.gender=req.body.gender;
+  product.telephone=req.body.telephone;
+  product.email=req.body.email;
+  product.ethnicity=req.body.ethnicity;
+  product.country=req.body.country;
+  product.address=req.body.address;
+  product.postalcode=req.body.postalcode;
+  product.participation=req.body.participation;
 
   product.img.path ="stylesheets/"+ req.body.file;
   product.img.contentType = "image/png";

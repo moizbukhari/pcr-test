@@ -17,8 +17,33 @@ block content
             label(for="status") COVID STATUS
             input#status(type="text", class="form-control", name="status")    
         .form-group
-            label(for="Date") COVID STATUS
-            input#Date(type="date", class="form-control", name="Date")       
+            label(for="Date") Date of Birth
+            input#Date(type="date", class="form-control", name="Date")    
+
+        .form-group
+            label(for="telephone") TELEPHONE
+            input#telephone(type="number", class="form-control", name="telephone")       
+
+
+            .form-group
+            label(for="gender") Gender
+             <select class="form-control"  name="gender" type="text" style={{ margin: "auto", width: "50%", height: "50px", fontSize: "18px" }}>
+                <option value="Male" style={select}>Male</option>
+                <option value="Female" style={select}>Female</option>
+            </select>
+            .form-group
+            label(for="ethnicity") Ethnicity
+             <select class="form-control"  name="ethnicity" type="text" style={{ margin: "auto", width: "50%", height: "50px", fontSize: "18px" }}>
+                <option value="Asian/Asian british" style={select}>Asian/Asian british</option>
+                <option value="African" style={select}>African</option>
+                <option value="Chinese" style={select}>Chinese</option>
+                <option value="Mixed ethnic groups" style={select}>Mixed ethnic groups</option>
+                <option value="Arab" style={select}>Arab</option>
+                <option value="White" style={select}>White</option>
+                <option value="Not provided" style={select}>Not provided</option>
+            </select>
+
+       
 
             .form-group
                 label(for="category") Partner Name

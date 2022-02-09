@@ -7,6 +7,14 @@ var productSchema = mongoose.Schema({
   category: String,
   status:String,
   condition: String,
+  gender:String,
+  telephone:String,
+  email:String,
+  ethnicity:String,
+  address:String,
+  postcode:String,
+  country:String,
+  participation: String,
   updated: { type: Date, default: Date.now },
   
   img: { 
