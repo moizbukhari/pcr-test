@@ -37,6 +37,7 @@ router.post("/add",async function (req, res, next) {
   product.condition= req.body.condition;
   product.status=req.body.status;
   product.Date=req.body.Date;
+  product.Date2=req.body.Date2;
   product.gender=req.body.gender;
   product.telephone=req.body.telephone;
   product.email=req.body.email;
@@ -86,6 +87,7 @@ router.post("/edit/:id", async function (req, res, next) {
   product.condition= req.body.condition;
   product.status=req.body.status;
   product.Date=req.body.Date;
+  product.Date2=req.body.Date2;
   product.gender=req.body.gender;
   product.telephone=req.body.telephone;
   product.email=req.body.email;

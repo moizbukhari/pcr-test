@@ -17,6 +17,7 @@ var productSchema = mongoose.Schema({
   participation: String,
   passport:String,
   updated: { type: Date, default: Date.now },
+  updated2: { type: Date, default: Date.now },
   
   img: { 
     path: String, 
