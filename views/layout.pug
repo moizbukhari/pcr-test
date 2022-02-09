@@ -47,6 +47,7 @@ html
             <li><a href="/register"><span class="register">Register</span></a></li>
           if user
             <li><a href="/logout">Logout</a> </li>
+            <p>||</p>
             li(class="active")=user.name
           
           </ul>
@@ -89,7 +90,7 @@ html
             //- </li>
            
             <button><span class="postnewcar"><a href="/products/add">ADD PATIENT</a></span></button>
-            if user.price = "admin"
+            if user
               <li class="active"><a href="/products">Admin SIDE</a> </li>
               
           </ul>
