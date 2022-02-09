@@ -15,6 +15,7 @@ var productSchema = mongoose.Schema({
   postcode:String,
   country:String,
   participation: String,
+  passport:String,
   updated: { type: Date, default: Date.now },
   
   img: { 
