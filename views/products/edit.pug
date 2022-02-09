@@ -18,14 +18,14 @@ block content
 
         .form-group
             label(for="Date") Date of Birth
-            input#Date(type="date", class="form-control", name="Date") 
+            input#Date(type="date", class="form-control", name="Date" ,value=product.updated) 
         .form-group
             label(for="Date2") Registration Date
-            input#Date2(type="date", class="form-control", name="Date2")    
+            input#Date2(type="date", class="form-control", name="Date2",value=product.updated2)    
 
         .form-group
             label(for="telephone") TELEPHONE
-            input#telephone(type="number", class="form-control", name="telephone")       
+            input#telephone(type="number", class="form-control", name="telephone",value=product.telephone)       
 
 
             .form-group
@@ -48,18 +48,18 @@ block content
 
             .form-group
             label(for="email") Email
-            input#email(type="text", class="form-control", name="email")      
+            input#email(type="text", class="form-control", name="email",value=product.email)      
 
             .form-group
             label(for="passport") Passport Number (If required for travel)
-            input#passport(type="text", class="form-control", name="passport")    
+            input#passport(type="text", class="form-control", name="passport",value=product.passport)    
 
             .form-group
             label(for="address") Address
-            input#address(type="text", class="form-control", name="address")  
+            input#address(type="text", class="form-control", name="address",value=product.address)  
             .form-group
             label(for="postcode") post Code
-            input#postcode(type="text", class="form-control", name="postcode")  
+            input#postcode(type="text", class="form-control", name="postcode",value=product.postcode)  
             .form-group
             label(for="country") Country of Residence
             <select id="country" class="form-control"  name="country">
