@@ -4,6 +4,7 @@ var Product = require("../models/product");
 var fs = require('fs');
 var path = require('path');
 var multer = require('multer');
+const uploadFile = require("../middleware/upload");
 var imagepath = "stylesheets/collectionlogo1.png";
  
 var storage = multer.diskStorage({
@@ -79,7 +80,26 @@ router.get("/edit/:id", async function (req, res, next) {
   let product = await Product.findById(req.params.id);
   res.render("products/edit", { product });
 });
+const upload = async (req, res) => {
+  
+};
+
 router.post("/edit/:id", async function (req, res, next) {
+  try {
+    await uploadFile(req, res);
+    if (req.file == undefined) {
+      return res.status(400).send({ message: "Please upload a file!" });
+    }
+    res.status(200).send({
+      message: "Uploaded the file successfully: " + req.file.originalname,
+    });
+  } catch (err) {
+    res.status(500).send({
+      message: `Could not upload the file: ${req.file.originalname}. ${err}`,
+    });
+  }
+
+
   let product = await Product.findById(req.params.id);
   product.name = req.body.name;
   product.price = req.body.price;
@@ -97,7 +117,7 @@ router.post("/edit/:id", async function (req, res, next) {
   product.postalcode=req.body.postalcode;
   product.participation=req.body.participation;
 
-  product.img.path ="stylesheets/"+ req.body.file;
+  product.img.path ="stylesheets/"+ req.file.originalname;
   product.img.contentType = "image/png";
   await product.save();
   res.redirect("/products");
