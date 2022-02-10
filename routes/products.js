@@ -80,9 +80,9 @@ router.get("/edit/:id", async function (req, res, next) {
   let product = await Product.findById(req.params.id);
   res.render("products/edit", { product });
 });
-const upload = async (req, res) => {
+// const upload = async (req, res) => {
   
-};
+// };
 
 router.post("/edit/:id", async function (req, res, next) {
   try {
