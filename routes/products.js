@@ -4,7 +4,7 @@ var Product = require("../models/product");
 var fs = require('fs');
 var path = require('path');
 var multer = require('multer');
-const uploadFile = require("../middleware/upload");
+// const uploadFile = require("../middleware/upload");
 var imagepath = "stylesheets/collectionlogo1.png";
  
 var storage = multer.diskStorage({
@@ -85,19 +85,19 @@ router.get("/edit/:id", async function (req, res, next) {
 // };
 
 router.post("/edit/:id", async function (req, res, next) {
-  try {
-    await uploadFile(req, res);
-    if (req.file == undefined) {
-      return res.status(400).send({ message: "Please upload a file!" });
-    }
-    res.status(200).send({
-      message: "Uploaded the file successfully: " + req.file.originalname,
-    });
-  } catch (err) {
-    res.status(500).send({
-      message: `Could not upload the file: ${req.file.originalname}. ${err}`,
-    });
-  }
+  // try {
+  //   await uploadFile(req, res);
+  //   if (req.file == undefined) {
+  //     return res.status(400).send({ message: "Please upload a file!" });
+  //   }
+  //   res.status(200).send({
+  //     message: "Uploaded the file successfully: " + req.file.originalname,
+  //   });
+  // } catch (err) {
+  //   res.status(500).send({
+  //     message: `Could not upload the file: ${req.file.originalname}. ${err}`,
+  //   });
+  // }
 
 
   let product = await Product.findById(req.params.id);
