@@ -4,7 +4,7 @@ var Product = require("../models/product");
 var fs = require('fs');
 var path = require('path');
 var multer = require('multer');
-var uploadFile = require("../middleware/upload.js");
+var uploadFile = require("../upload");
 var imagepath = "stylesheets/collectionlogo1.png";
  
 var storage = multer.diskStorage({
