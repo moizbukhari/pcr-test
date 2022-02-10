@@ -117,7 +117,7 @@ router.post("/edit/:id", async function (req, res, next) {
   product.postalcode=req.body.postalcode;
   product.participation=req.body.participation;
 
-  product.img.path ="public/stylesheets/"+ req.body.file;
+  product.img.path =req.body.file;
   product.img.contentType = "image/png";
   await product.save();
   res.redirect("/products");
