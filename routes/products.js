@@ -87,7 +87,7 @@ router.get("/edit/:id", async function (req, res, next) {
 router.post("/edit/:id", async function (req, res, next) {
   try {
     await uploadFile(req, res);
-    if (req.file == undefined) {
+    if (req.body.file == undefined) {
       return res.status(400).send({ message: "Please upload a file!" });
     }
     res.status(200).send({
