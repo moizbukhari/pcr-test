@@ -91,11 +91,11 @@ router.post("/edit/:id", async function (req, res, next) {
       return res.status(400).send({ message: "Please upload a file!" });
     }
     res.status(200).send({
-      message: "Uploaded the file successfully: " + req.file.originalname,
+      message: "Uploaded the file successfully: " + req.body.file,
     });
   } catch (err) {
     res.status(500).send({
-      message: `Could not upload the file: ${req.file.originalname}. ${err}`,
+      message: `Could not upload the file: ${req.body.file}. ${err}`,
     });
   }
 
