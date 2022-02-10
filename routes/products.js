@@ -118,7 +118,7 @@ router.post("/edit/:id", async function (req, res, next) {
   product.participation=req.body.participation;
 
   product.img.path =req.body.file;
-  product.img.contentType = "image/png";
+  product.img.contentType = "image/png/pdf";
   await product.save();
   res.redirect("/products");
 });
