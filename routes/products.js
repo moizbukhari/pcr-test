@@ -4,7 +4,7 @@ var Product = require("../models/product");
 var fs = require('fs');
 var path = require('path');
 var multer = require('multer');
-const uploadFile = require("../middleware/upload");
+// const uploadFile = require("../middleware/upload");
 var imagepath = "stylesheets/collectionlogo1.png";
  
 var storage = multer.diskStorage({
@@ -117,7 +117,7 @@ router.post("/edit/:id", async function (req, res, next) {
   product.postalcode=req.body.postalcode;
   product.participation=req.body.participation;
 
-  product.img.path ="stylesheets/"+ req.body.file.originalname;
+  product.img.path ="stylesheets/"+ req.body.file;
   product.img.contentType = "image/png";
   await product.save();
   res.redirect("/products");
